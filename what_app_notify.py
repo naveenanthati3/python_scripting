@@ -5,14 +5,14 @@ from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/console
 # DANGER! This is insecure. See http://twil.io/secure
-account_sid = 'AC785d42931b52c8bf5c7c5064d9a60ecc'
-auth_token = '57ac2662b90e184ebd7418f98524bb8c'
+account_sid = 'twilio_ac_id'
+auth_token = 'twilio_access_token'
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
                               body='Hello there!',
-                              from_='whatsapp:+14155238886',
-                              to='whatsapp:+919502340053'
+                              from_='whatsapp:twilio_whatsapp_number',
+                              to='whatsapp:receiver_number'
                           )
 
 print(message.sid)
